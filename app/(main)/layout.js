@@ -80,7 +80,7 @@ export default function MainLayout({ children }) {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Let's Talk
+              Let's Connect
             </motion.a>
           </div>
 
@@ -118,7 +118,7 @@ export default function MainLayout({ children }) {
                   className="btn-primary w-full text-center"
                   onClick={() => setIsOpen(false)}
                 >
-                  Let's Talk
+                  Let's Connect
                 </a>
               </div>
             </motion.div>

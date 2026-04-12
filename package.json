@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "framer-motion": "latest",
+    "ioredis": "^5.10.1",
     "jose": "^6.2.2",
     "lucide-react": "latest",
     "mongoose": "latest",
