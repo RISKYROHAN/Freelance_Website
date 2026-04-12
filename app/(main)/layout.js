@@ -24,31 +24,38 @@ export default function MainLayout({ children }) {
   const navLinks = [
     { name: 'Home', href: '/#home' },
     { name: 'About', href: '/#about' },
-    { name: 'Founder', href: '/#founder' },
+    // { name: 'Founder', href: '/#founder' },
     { name: 'Services', href: '/#services' },
-    { name: 'Why DevLoom', href: '/#why-us' },
+    { name: 'Why Localify', href: '/#why-us' },
     { name: 'Testimonials', href: '/#testimonials' },
   ];
 
   return (
     <div className="flex min-h-screen flex-col">
       {/* Premium Header */}
-      <nav 
-        className={`fixed top-0 z-50 w-full transition-all duration-300 ${
-          showSolidNav ? 'bg-white/90 shadow-lg backdrop-blur-md py-3' : 'bg-transparent py-5'
-        }`}
+      <nav
+        className={`fixed top-0 z-50 w-full transition-all duration-300 ${showSolidNav ? 'bg-white/90 shadow-lg backdrop-blur-md py-3' : 'bg-transparent py-5'
+          }`}
       >
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-          <motion.a 
-            href="/#home" 
+          <motion.a
+            href="/#home"
             className="flex items-center gap-2"
             whileHover={{ scale: 1.05 }}
           >
-            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-accent-600 font-black text-white shadow-lg shadow-accent-600/20">
-              D
+            <div className="relative flex h-10 w-10 items-center justify-center">
+              <svg viewBox="0 0 100 100" className="w-full h-full">
+                <path d="M 50 95 A 45 45 0 1 1 85 20 L 78 28 A 35 35 0 1 0 45 85 Z" className={showSolidNav ? 'fill-corporate-900' : 'fill-white'} />
+                <path d="M50 85 C50 85, 30 50, 30 35 C30 20, 40 15, 50 15 C60 15, 70 20, 70 35 C70 50, 50 85, 50 85 Z" className="fill-accent-500" />
+                <circle cx="50" cy="35" r="10" className="fill-white" />
+                <rect x="70" y="15" width="8" height="8" className={showSolidNav ? 'fill-corporate-900' : 'fill-white'} />
+                <rect x="82" y="20" width="8" height="8" className="fill-accent-500" />
+                <rect x="75" y="28" width="8" height="8" className={showSolidNav ? 'fill-corporate-900' : 'fill-white'} />
+                <rect x="65" y="25" width="6" height="6" className="fill-accent-500" />
+              </svg>
             </div>
             <span className={`text-2xl font-black tracking-tighter ${showSolidNav ? 'text-corporate-900' : 'text-white'}`}>
-              DevLoom
+              Local<span className="text-accent-500">ify</span>
             </span>
           </motion.a>
 
@@ -56,20 +63,19 @@ export default function MainLayout({ children }) {
           <div className="hidden items-center gap-8 md:flex">
             <div className="flex space-x-8">
               {navLinks.map((link) => (
-                <a 
+                <a
                   key={link.name}
-                  href={link.href} 
-                  className={`group relative text-sm font-semibold transition-colors ${
-                    showSolidNav ? 'text-corporate-600 hover:text-accent-600' : 'text-white/80 hover:text-white'
-                  }`}
+                  href={link.href}
+                  className={`group relative text-sm font-semibold transition-colors ${showSolidNav ? 'text-corporate-600 hover:text-accent-600' : 'text-white/80 hover:text-white'
+                    }`}
                 >
                   {link.name}
                   <span className="absolute -bottom-1 left-0 h-0.5 w-0 bg-accent-500 transition-all duration-300 group-hover:w-full" />
                 </a>
               ))}
             </div>
-            <motion.a 
-              href="/#contact" 
+            <motion.a
+              href="/#contact"
               className="btn-primary !py-2.5 !px-5 shadow-lg shadow-accent-600/20"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -79,7 +85,7 @@ export default function MainLayout({ children }) {
           </div>
 
           {/* Mobile Menu Button */}
-          <button 
+          <button
             className={`md:hidden p-2 rounded-lg transition-colors ${showSolidNav ? 'text-corporate-900 hover:bg-corporate-100' : 'text-white hover:bg-white/10'}`}
             onClick={() => setIsOpen(!isOpen)}
           >
@@ -90,7 +96,7 @@ export default function MainLayout({ children }) {
         {/* Mobile Menu Drawer */}
         <AnimatePresence>
           {isOpen && (
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
@@ -98,17 +104,17 @@ export default function MainLayout({ children }) {
             >
               <div className="flex flex-col space-y-4 p-6">
                 {navLinks.map((link) => (
-                  <a 
+                  <a
                     key={link.name}
-                    href={link.href} 
+                    href={link.href}
                     className="text-lg font-bold text-corporate-900 hover:text-accent-600 transition-colors"
                     onClick={() => setIsOpen(false)}
                   >
                     {link.name}
                   </a>
                 ))}
-                <a 
-                  href="/#contact" 
+                <a
+                  href="/#contact"
                   className="btn-primary w-full text-center"
                   onClick={() => setIsOpen(false)}
                 >
@@ -126,17 +132,25 @@ export default function MainLayout({ children }) {
       <footer className="bg-corporate-900 pt-20 pb-10 text-white overflow-hidden relative">
         <div className="absolute top-0 right-0 -mr-20 -mt-20 h-64 w-64 rounded-full bg-accent-500/10 blur-3xl"></div>
         <div className="absolute bottom-0 left-0 -ml-20 -mb-20 h-64 w-64 rounded-full bg-corporate-500/10 blur-3xl"></div>
-        
+
         <div className="section-container relative z-10">
           <div className="grid gap-12 lg:grid-cols-4">
             {/* Column 1: Brand */}
             <div className="space-y-6">
               <a href="/#home" className="flex items-center gap-2">
-                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-accent-600 font-black text-white">
-                  D
+                <div className="relative flex h-10 w-10 items-center justify-center">
+                  <svg viewBox="0 0 100 100" className="w-full h-full">
+                    <path d="M 50 95 A 45 45 0 1 1 85 20 L 78 28 A 35 35 0 1 0 45 85 Z" className="fill-white" />
+                    <path d="M50 85 C50 85, 30 50, 30 35 C30 20, 40 15, 50 15 C60 15, 70 20, 70 35 C70 50, 50 85, 50 85 Z" className="fill-accent-500" />
+                    <circle cx="50" cy="35" r="10" className="fill-corporate-900" />
+                    <rect x="70" y="15" width="8" height="8" className="fill-white" />
+                    <rect x="82" y="20" width="8" height="8" className="fill-accent-500" />
+                    <rect x="75" y="28" width="8" height="8" className="fill-white" />
+                    <rect x="65" y="25" width="6" height="6" className="fill-accent-500" />
+                  </svg>
                 </div>
                 <span className="text-2xl font-black tracking-tighter text-white">
-                  DevLoom
+                  Local<span className="text-accent-500">ify</span>
                 </span>
               </a>
               <p className="text-corporate-300 leading-relaxed max-w-xs">
@@ -144,9 +158,9 @@ export default function MainLayout({ children }) {
               </p>
               <div className="flex gap-4">
                 {[MessageCircle, Send, Camera, Globe].map((Icon, i) => (
-                  <motion.a 
+                  <motion.a
                     key={i}
-                    href="#" 
+                    href="#"
                     className="rounded-full bg-corporate-800 p-2.5 text-corporate-300 transition-colors hover:bg-accent-600 hover:text-white"
                     whileHover={{ scale: 1.1, y: -2 }}
                   >
@@ -196,7 +210,7 @@ export default function MainLayout({ children }) {
                   </div>
                   <div>
                     <p className="text-xs uppercase tracking-widest text-corporate-500 mb-1 font-bold">Email Us</p>
-                    <a href="mailto:hello@devloom.com" className="text-corporate-200 hover:text-white transition-colors">hello@devloom.com</a>
+                    <a href="mailto:hello@localify.com" className="text-corporate-200 hover:text-white transition-colors">contact@localify.com</a>
                   </div>
                 </li>
                 <li className="flex items-start gap-4">
@@ -205,7 +219,7 @@ export default function MainLayout({ children }) {
                   </div>
                   <div>
                     <p className="text-xs uppercase tracking-widest text-corporate-500 mb-1 font-bold">Call Us</p>
-                    <a href="tel:+1234567890" className="text-corporate-200 hover:text-white transition-colors">+1 (234) 567-890</a>
+                    <a href="tel:+1234567890" className="text-corporate-200 hover:text-white transition-colors">+91 1234567890</a>
                   </div>
                 </li>
                 <li className="flex items-start gap-4">
@@ -214,7 +228,7 @@ export default function MainLayout({ children }) {
                   </div>
                   <div>
                     <p className="text-xs uppercase tracking-widest text-corporate-500 mb-1 font-bold">Our Office</p>
-                    <p className="text-corporate-200">123 Local Street, City Center</p>
+                    <p className="text-corporate-200">Kolkata, West Bengal, India</p>
                   </div>
                 </li>
               </ul>
@@ -223,7 +237,7 @@ export default function MainLayout({ children }) {
 
           <div className="mt-20 border-t border-corporate-800 pt-10 flex flex-col md:flex-row justify-between items-center gap-6">
             <p className="text-sm text-corporate-500">
-              © {new Date().getFullYear()} DevLoom Web Services. All rights reserved.
+              © {new Date().getFullYear()} Localify Web Services. All rights reserved.
             </p>
             <div className="flex gap-8 text-sm text-corporate-500">
               <a href="/privacy" className="hover:text-white transition-colors">Privacy Policy</a>

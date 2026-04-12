@@ -24,7 +24,7 @@ export default function PrivacyPolicy() {
             <section>
               <h2 className="text-2xl font-bold text-corporate-900 mb-4">1. Introduction</h2>
               <p>
-                Welcome to DevLoom Web Services. We value your privacy and are committed to protecting your personal data. This Privacy Policy explains how we collect, use, and safeguard your information when you visit our website and use our services.
+                Welcome to Localify Web Services. We value your privacy and are committed to protecting your personal data. This Privacy Policy explains how we collect, use, and safeguard your information when you visit our website and use our services.
               </p>
             </section>
 
@@ -65,7 +65,7 @@ export default function PrivacyPolicy() {
             <section>
               <h2 className="text-2xl font-bold text-corporate-900 mb-4">5. Your Rights</h2>
               <p>
-                You have the right to request access to, correction of, or deletion of your personal data that we hold. If you wish to exercise these rights, please contact us at hello@devloom.com.
+                You have the right to request access to, correction of, or deletion of your personal data that we hold. If you wish to exercise these rights, please contact us at hello@localify.com.
               </p>
             </section>
 

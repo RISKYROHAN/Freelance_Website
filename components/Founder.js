@@ -25,7 +25,7 @@ export default function Founder() {
         <motion.div 
           initial="hidden" whileInView="visible" viewport={{ once: false }} variants={fadeInUp}
         >
-          <h2 className="mb-4 text-sm font-bold tracking-widest text-accent-600 uppercase">Man Behind DevLoom</h2>
+          <h2 className="mb-4 text-sm font-bold tracking-widest text-accent-600 uppercase">Man Behind Localify</h2>
           <h3 className="mb-6 text-3xl font-bold sm:text-4xl text-corporate-900">Hi, I'm the person you'll be working with directly.</h3>
           <p className="mb-4 text-corporate-600">
             I started by helping local businesses build their online presence, and I quickly realised one thing: most businesses don't need complex websites — they need simple, clean websites that actually bring them customers.

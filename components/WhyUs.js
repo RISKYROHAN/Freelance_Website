@@ -45,7 +45,7 @@ export default function WhyUs() {
           className="text-center mb-16"
           initial="hidden" whileInView="visible" viewport={{ once: false }} variants={fadeInUp}
         >
-          <h2 className="mb-4 text-sm font-bold tracking-widest text-accent-600 uppercase">The DevLoom Advantage</h2>
+          <h2 className="mb-4 text-sm font-bold tracking-widest text-accent-600 uppercase">The Localify Advantage</h2>
           <h3 className="mb-4 text-3xl font-bold sm:text-4xl text-corporate-900">Why Smart Businesses Choose Me</h3>
           <p className="mx-auto max-w-2xl text-corporate-600">
             Not just another developer — a focused partner who cares about your results.

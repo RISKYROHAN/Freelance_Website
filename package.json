@@ -1,7 +1,7 @@
 {
-  "name": "devloom-portfolio",
+  "name": "localify-portfolio",
   "version": "1.0.0",
-  "description": "DevLoom Portfolio Website",
+  "description": "Localify Portfolio Website",
   "private": true,
   "scripts": {
     "dev": "next dev",

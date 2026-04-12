@@ -1,6 +1,6 @@
 import Hero from '@/components/Hero';
 import About from '@/components/About';
-import Founder from '@/components/Founder';
+// import Founder from '@/components/Founder';
 import Services from '@/components/Services';
 import Upgrade from '@/components/Upgrade';
 import WhyUs from '@/components/WhyUs';
@@ -13,7 +13,7 @@ export default function HomePage() {
     <div>
       <Hero />
       <About />
-      <Founder />
+      {/* <Founder /> */}
       <Services />
       <Upgrade />
       <WhyUs />

@@ -4,8 +4,8 @@ import { Inter } from 'next/font/google';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
-  title: 'DevLoom | Premium Web Development Services',
-  description: 'We build corporate, high-converting websites for ambitious businesses. Elevate your digital presence with DevLoom.',
+  title: 'Localify | Premium Web Development Services',
+  description: 'We build corporate, high-converting websites for ambitious businesses. Elevate your digital presence with Localify.',
 };
 
 export default function RootLayout({ children }) {

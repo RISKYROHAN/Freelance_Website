@@ -1,5 +1,5 @@
 export const metadata = {
-  title: 'Admin Dashboard | DevLoom',
+  title: 'Admin Dashboard | Localify',
   description: 'Manage your portfolio inquiries',
 };
 
