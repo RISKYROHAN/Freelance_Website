@@ -61,11 +61,11 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="bg-white">
+    <section id="contact" className="bg-white overflow-hidden">
       <div className="section-container relative">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-accent-100 rounded-full blur-[120px] opacity-20 pointer-events-none"></div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] sm:w-[800px] sm:h-[800px] bg-accent-100 rounded-full blur-[120px] opacity-20 pointer-events-none"></div>
         <motion.div 
-          className="mx-auto max-w-3xl rounded-3xl bg-corporate-900 p-8 text-white sm:p-12 shadow-2xl relative z-10"
+          className="mx-auto max-w-3xl rounded-3xl bg-corporate-900 p-6 sm:p-12 text-white shadow-2xl relative z-10"
           initial="hidden" whileInView="visible" viewport={{ once: false }} variants={fadeInUp}
         >
           <div className="text-center mb-10">

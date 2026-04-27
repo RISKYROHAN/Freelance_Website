@@ -64,7 +64,7 @@ export default function WhyUs() {
             return (
               <motion.div 
                 key={i} 
-                className="rounded-2xl border-l-4 border-accent-500 bg-corporate-50 p-8 flex flex-col items-start transition hover:bg-corporate-100 cursor-pointer"
+                className="rounded-2xl border-l-4 border-accent-500 bg-corporate-50 p-6 md:p-8 flex flex-col items-start transition hover:bg-corporate-100 cursor-pointer"
                 variants={fadeInUp}
               >
                 <div className="mb-4 rounded-full bg-accent-100 p-3 text-accent-600">
