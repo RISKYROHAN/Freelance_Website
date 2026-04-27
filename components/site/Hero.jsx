@@ -32,7 +32,7 @@ export const Hero = () => {
     const onScroll = () => {
       if (!orbRef.current) return;
       const y = window.scrollY;
-      orbRef.current.style.transform = `translateY(${y * 0.15}px) scale(${1.1 - y * 0.0001})`;
+      orbRef.current.style.transform = `translateY(${y * 0.05}px) scale(${1.1 - y * 0.0001})`;
     };
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
