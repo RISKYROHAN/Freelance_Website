@@ -214,4 +214,159 @@
     0% { background-position: -200% 0; }
     100% { background-position: 200% 0; }
   }
+
+  /* ---------- Reveal on scroll ---------- */
+  .reveal {
+    opacity: 0;
+    transition: opacity 0.9s var(--ease-out-expo), transform 0.9s var(--ease-out-expo), filter 0.9s var(--ease-out-expo);
+    will-change: opacity, transform;
+  }
+  .reveal-up { transform: translateY(40px); }
+  .reveal-down { transform: translateY(-40px); }
+  .reveal-left { transform: translateX(-40px); }
+  .reveal-right { transform: translateX(40px); }
+  .reveal-zoom { transform: scale(0.92); filter: blur(6px); }
+  .reveal-blur { filter: blur(10px); transform: translateY(20px); }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translate3d(0,0,0) scale(1);
+    filter: blur(0);
+  }
+
+  /* ---------- Animated gradient text ---------- */
+  .text-gradient-animated {
+    background: linear-gradient(
+      120deg,
+      hsl(var(--foreground)) 0%,
+      hsl(var(--primary)) 35%,
+      hsl(var(--accent)) 55%,
+      hsl(var(--foreground)) 100%
+    );
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-shift 8s ease-in-out infinite;
+  }
+  @keyframes gradient-shift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+
+  /* ---------- Tilt card spotlight ---------- */
+  .tilt-card {
+    position: relative;
+    transform-style: preserve-3d;
+  }
+  .tilt-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: radial-gradient(
+      400px circle at var(--mx, 50%) var(--my, 50%),
+      hsl(var(--primary) / 0.15),
+      transparent 40%
+    );
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+    z-index: 1;
+  }
+  .tilt-card:hover::before { opacity: 1; }
+
+  /* ---------- Magnetic button shine ---------- */
+  .btn-shine {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+  }
+  .btn-shine::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      110deg,
+      transparent 30%,
+      hsl(0 0% 100% / 0.25) 50%,
+      transparent 70%
+    );
+    transform: translateX(-100%);
+    transition: transform 0.7s var(--ease-out-expo);
+    pointer-events: none;
+  }
+  .btn-shine:hover::after { transform: translateX(100%); }
+
+  /* ---------- Underline link ---------- */
+  .link-underline {
+    position: relative;
+  }
+  .link-underline::after {
+    content: '';
+    position: absolute;
+    left: 0; bottom: -2px;
+    height: 1px;
+    width: 100%;
+    background: currentColor;
+    transform: scaleX(0);
+    transform-origin: right center;
+    transition: transform 0.5s var(--ease-out-expo);
+  }
+  .link-underline:hover::after {
+    transform: scaleX(1);
+    transform-origin: left center;
+  }
+
+  /* ---------- Spinning ring ---------- */
+  @keyframes spin-slow {
+    to { transform: rotate(360deg); }
+  }
+  .spin-slow { animation: spin-slow 18s linear infinite; }
+
+  /* ---------- Subtle blob morph ---------- */
+  @keyframes morph {
+    0%, 100% { border-radius: 60% 40% 50% 50% / 50% 60% 40% 50%; }
+    50% { border-radius: 40% 60% 60% 40% / 60% 40% 60% 40%; }
+  }
+  .morph { animation: morph 12s ease-in-out infinite; }
+
+  /* ---------- Text reveal mask ---------- */
+  .text-mask {
+    overflow: hidden;
+    display: inline-block;
+  }
+  .text-mask > span {
+    display: inline-block;
+    transform: translateY(110%);
+    animation: text-rise 1s var(--ease-out-expo) forwards;
+  }
+  @keyframes text-rise {
+    to { transform: translateY(0); }
+  }
+
+  /* ---------- Pulse dot ---------- */
+  @keyframes ping-soft {
+    0% { transform: scale(1); opacity: 0.6; }
+    100% { transform: scale(2.5); opacity: 0; }
+  }
+  .ping-soft::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: currentColor;
+    animation: ping-soft 2s cubic-bezier(0,0,0.2,1) infinite;
+  }
+
+  /* ---------- Honor reduced motion ---------- */
+  @media (prefers-reduced-motion: reduce) {
+    .reveal, .float, .glow-pulse, .marquee, .spin-slow, .morph,
+    .text-gradient-animated, .ping-soft::before {
+      animation: none !important;
+      transition: none !important;
+      transform: none !important;
+      opacity: 1 !important;
+      filter: none !important;
+    }
+  }
 }
