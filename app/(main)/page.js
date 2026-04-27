@@ -1,25 +1,31 @@
-import Hero from '@/components/Hero';
-import About from '@/components/About';
-// import Founder from '@/components/Founder';
-import Services from '@/components/Services';
-import Upgrade from '@/components/Upgrade';
-import WhyUs from '@/components/WhyUs';
-import Portfolio from '@/components/Portfolio';
-import Testimonials from '@/components/Testimonials';
-import Contact from '@/components/Contact';
+'use client';
+
+import { Navbar } from "@/components/site/Navbar";
+import { Hero } from "@/components/site/Hero";
+import { About } from "@/components/site/About";
+import { Services } from "@/components/site/Services";
+import { UpgradeCTA } from "@/components/site/UpgradeCTA";
+import { WhyLocalify } from "@/components/site/WhyLocalify";
+import { Works } from "@/components/site/Works";
+import { Testimonials } from "@/components/site/Testimonials";
+import { Contact } from "@/components/site/Contact";
+import { Footer } from "@/components/site/Footer";
 
 export default function HomePage() {
-  return (
-    <div>
-      <Hero />
-      <About />
-      {/* <Founder /> */}
-      <Services />
-      <Upgrade />
-      <WhyUs />
-      <Portfolio />
-      <Testimonials />
-      <Contact />
-    </div>
-  );
+    return (
+      <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+        <Navbar />
+        <main>
+          <Hero />
+          <About />
+          <Services />
+          <UpgradeCTA />
+          <WhyLocalify />
+          <Works />
+          <Testimonials />
+          <Contact />
+        </main>
+        <Footer />
+      </div>
+    );
 }
