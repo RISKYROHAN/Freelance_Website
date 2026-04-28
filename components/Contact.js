@@ -2,8 +2,10 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import { useRouter } from 'next/navigation';
 
 export default function Contact() {
+  const router = useRouter();
   const [formData, setFormData] = useState({ name: '', email: '', message: '', businessType: '' });
   const [status, setStatus] = useState('');
 
@@ -34,8 +36,8 @@ export default function Contact() {
         body: JSON.stringify(formData),
       });
       if (res.ok) {
-        setStatus('Message sent successfully!');
         setFormData({ name: '', email: '', message: '', businessType: '' });
+        router.push('/thank-you');
       } else {
         setStatus('Failed to send message.');
       }
@@ -69,9 +71,9 @@ export default function Contact() {
           initial="hidden" whileInView="visible" viewport={{ once: false }} variants={fadeInUp}
         >
           <div className="text-center mb-10">
-            <h2 className="mb-4 text-3xl font-bold sm:text-4xl text-white">Ready To Scale Your Business?</h2>
+            <h2 className="mb-4 text-3xl font-bold sm:text-4xl text-white">Claim Your Free Website Prototype</h2>
             <p className="text-corporate-200">
-              Let's get on a free consultation call to discuss your goals and how a premium custom website can help you achieve them.
+              Fill out the form below and our team will design a custom, risk-free homepage prototype for your business. No credit card required.
             </p>
           </div>
           <form onSubmit={handleSubmit} className="space-y-6">

@@ -17,7 +17,7 @@ const works = [
 ];
 
 export const Works = () => {
-    return (<section id="works" className="relative py-24 lg:py-32">
+    return (<section id="works" className="relative py-12 lg:py-20">
       <div className="container">
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-16 lg:mb-20">
           <div className="max-w-2xl">

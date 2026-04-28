@@ -36,9 +36,12 @@ export default function Hero() {
         <p className="mx-auto mb-10 max-w-2xl text-lg text-corporate-200 sm:text-xl px-4 sm:px-0">
           We specialize in high-converting, premium websites for Doctors, Lawyers, Restaurants, and Local Shops. Transform your local presence into a digital powerhouse.
         </p>
-        <div className="flex flex-col sm:flex-row justify-center gap-4 w-full px-4 sm:px-0">
-          <a href="#contact" className="btn-primary w-full sm:w-auto">Bring Your Business Online</a>
-          <a href="#portfolio" className="btn-secondary !bg-transparent !text-white !border-white hover:!bg-white/10 w-full sm:w-auto">View Our Work</a>
+        <div className="flex flex-col items-center w-full px-4 sm:px-0">
+          <div className="flex flex-col sm:flex-row justify-center gap-4 w-full sm:w-auto">
+            <a href="#contact" className="btn-primary w-full sm:w-auto text-lg px-8">Get a Free Website Prototype</a>
+            <a href="#portfolio" className="btn-secondary !bg-transparent !text-white !border-white hover:!bg-white/10 w-full sm:w-auto text-lg px-8">View Our Work</a>
+          </div>
+          <p className="mt-4 text-sm text-corporate-400">No credit card required • Risk-free consultation</p>
         </div>
       </motion.div>
     </section>

@@ -1,7 +1,7 @@
 import { Reveal } from "@/components/site/Reveal";
 
 export const About = () => {
-    return (<section id="about" className="relative py-24 lg:py-32">
+    return (<section id="about" className="relative py-12 lg:py-20">
       <div className="container">
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-20">
           <div className="lg:col-span-5">
@@ -15,7 +15,7 @@ export const About = () => {
 
           <div className="lg:col-span-7 space-y-8">
             <Reveal as="p" variant="up" className="text-xl lg:text-2xl text-foreground/90 leading-relaxed font-light">
-              Localify Web Services is dedicated to helping local professionals — <span className="text-foreground font-normal">Doctors, Lawyers, Restaurateurs, and Boutique Owners</span> — establish a premium online presence. In a world where your first impression is often digital, we ensure your business stands out.
+              CatalystWeb Solutions is dedicated to helping local professionals — <span className="text-foreground font-normal">Doctors, Lawyers, Restaurateurs, and Boutique Owners</span> — establish a premium online presence. In a world where your first impression is often digital, we ensure your business stands out.
             </Reveal>
 
             <Reveal variant="left" delay={150} className="h-px bg-gradient-to-r from-border via-border/40 to-transparent"/>

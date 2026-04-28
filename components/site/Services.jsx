@@ -9,7 +9,7 @@ const services = [
 ];
 
 export const Services = () => {
-    return (<section id="services" className="relative py-24 lg:py-32 overflow-hidden">
+    return (<section id="services" className="relative py-12 lg:py-20 overflow-hidden">
       <div className="absolute inset-0 grid-bg opacity-30 pointer-events-none"/>
 
       <div className="container relative">

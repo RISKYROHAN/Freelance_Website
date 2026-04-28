@@ -24,14 +24,14 @@ export default function TermsOfService() {
             <section>
               <h2 className="text-2xl font-bold text-corporate-900 mb-4">1. Acceptance of Terms</h2>
               <p>
-                By accessing or using the services provided by Localify Web Services, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our services.
+                By accessing or using the services provided by CatalystWeb Solutions, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our services.
               </p>
             </section>
 
             <section>
               <h2 className="text-2xl font-bold text-corporate-900 mb-4">2. Description of Services</h2>
               <p>
-                Localify provides premium web design, development, SEO, and digital consulting services specifically tailored for local businesses and professionals (Doctors, Lawyers, Restaurants, etc.).
+                CatalystWeb Solutions provides premium web design, development, SEO, and digital consulting services specifically tailored for local businesses and professionals (Doctors, Lawyers, Restaurants, etc.).
               </p>
             </section>
 
@@ -47,14 +47,14 @@ export default function TermsOfService() {
             <section>
               <h2 className="text-2xl font-bold text-corporate-900 mb-4">4. Intellectual Property</h2>
               <p>
-                Upon receipt of full payment, all custom design and code developed specifically for the client's website will be owned by the client. Localify retains the right to showcase the work in our portfolio and marketing materials.
+                Upon receipt of full payment, all custom design and code developed specifically for the client's website will be owned by the client. CatalystWeb Solutions retains the right to showcase the work in our portfolio and marketing materials.
               </p>
             </section>
 
             <section>
               <h2 className="text-2xl font-bold text-corporate-900 mb-4">5. Limitation of Liability</h2>
               <p>
-                Localify will not be liable for any indirect, incidental, or consequential damages resulting from the use of our services or any third-party platforms (hosting providers, CMS plugins, etc.) used in the project.
+                CatalystWeb Solutions will not be liable for any indirect, incidental, or consequential damages resulting from the use of our services or any third-party platforms (hosting providers, CMS plugins, etc.) used in the project.
               </p>
             </section>
 
@@ -68,7 +68,7 @@ export default function TermsOfService() {
             <section>
               <h2 className="text-2xl font-bold text-corporate-900 mb-4">7. Contact Information</h2>
               <p>
-                Questions about the Terms of Service should be sent to us at hello@localify.com.
+                Questions about the Terms of Service should be sent to us at hello@catalystweb.com.
               </p>
             </section>
           </div>

@@ -34,7 +34,7 @@ export const Contact = () => {
             setLoading(false);
         }
     };
-    return (<section id="contact" className="relative py-24 lg:py-32 overflow-hidden">
+    return (<section id="contact" className="relative py-12 lg:py-20 overflow-hidden">
       <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[800px] h-[600px] rounded-full bg-primary/10 blur-[140px] pointer-events-none morph"/>
 
       <div className="container relative">
@@ -50,7 +50,7 @@ export const Contact = () => {
 
             <div className="mt-10 space-y-4">
               {[
-            { icon: Mail, label: "hello@localify.in" },
+            { icon: Mail, label: "hello@catalystweb.com" },
             { icon: Phone, label: "+91 · Available on request" },
             { icon: MapPin, label: "Serving local businesses · India" },
         ].map((item, i) => (<Reveal key={item.label} variant="left" delay={300 + i * 100} className="flex items-center gap-4 group cursor-pointer">

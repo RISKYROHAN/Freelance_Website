@@ -4,7 +4,7 @@ const links = [
     { href: "#home", label: "Home" },
     { href: "#about", label: "About" },
     { href: "#services", label: "Services" },
-    { href: "#why", label: "Why Localify" },
+    { href: "#why", label: "Why CatalystWeb" },
     { href: "#works", label: "Works" },
     { href: "#testimonials", label: "Testimonials" },
 ];
@@ -17,8 +17,13 @@ export const Navbar = () => {
         window.addEventListener("scroll", onScroll);
         return () => window.removeEventListener("scroll", onScroll);
     }, []);
-    return (<header className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${scrolled ? "py-3" : "py-5"}`}>
-      <div className="container">
+    return (<header className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 flex flex-col`}>
+      <div className="w-full bg-gradient-to-r from-primary to-accent-600 flex items-center justify-center text-base sm:text-lg font-bold text-white shadow-md py-3 sm:py-4">
+        <span className="px-4 text-center tracking-wide flex items-center gap-2 flex-wrap justify-center">
+          🔥 <span>Limited Offer:</span> <a href="#contact" className="underline decoration-2 underline-offset-4 hover:text-white/80 transition-colors">Claim Your FREE Custom Website Prototype!</a> 🚀
+        </span>
+      </div>
+      <div className={`container transition-all duration-500 ${scrolled ? "py-2" : "py-3"}`}>
         <nav className={`flex items-center justify-between rounded-full px-5 py-3 transition-all duration-500 ${scrolled ? "glass-strong shadow-elegant" : "glass"}`}>
           <a href="#home" className="flex items-center gap-2 group">
             <span className="relative flex h-9 w-9 items-center justify-center rounded-full bg-gradient-primary shadow-glow">
@@ -26,7 +31,7 @@ export const Navbar = () => {
               <span className="absolute inset-0 rounded-full bg-gradient-primary blur-md opacity-50 group-hover:opacity-80 transition"/>
             </span>
             <span className="font-display text-lg font-semibold tracking-tight">
-              Local<span className="text-gradient-primary">ify</span>
+              Catalyst<span className="text-gradient-primary">Web</span>
             </span>
           </a>
 

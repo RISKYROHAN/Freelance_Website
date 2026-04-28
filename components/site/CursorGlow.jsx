@@ -35,10 +35,10 @@ export const CursorGlow = () => {
     <div
       ref={ref}
       aria-hidden
-      className="pointer-events-none fixed top-0 left-0 z-[55] h-[400px] w-[400px] rounded-full opacity-60 mix-blend-screen hidden md:block"
+      className="pointer-events-none fixed top-0 left-0 z-[55] h-[400px] w-[400px] rounded-full opacity-70 mix-blend-multiply hidden md:block"
       style={{
         background:
-          "radial-gradient(circle at center, hsl(var(--primary) / 0.18) 0%, hsl(var(--primary) / 0.06) 35%, transparent 70%)",
+          "radial-gradient(circle at center, hsl(var(--primary) / 0.18) 0%, hsl(var(--accent) / 0.08) 35%, transparent 70%)",
         filter: "blur(20px)",
       }}
     />

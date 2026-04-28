@@ -20,7 +20,7 @@ export const Footer = () => {
                 <MapPin className="h-4 w-4 text-primary-foreground" strokeWidth={2.5} />
               </span>
               <span className="font-display text-lg font-semibold">
-                Local<span className="text-gradient-primary">ify</span>
+                Catalyst<span className="text-gradient-primary">Web</span>
               </span>
             </a>
             <p className="text-sm text-muted-foreground max-w-sm leading-relaxed">
@@ -69,20 +69,16 @@ export const Footer = () => {
               links={[
                 { label: "Free consultation", href: "#contact" },
                 { label: "WhatsApp", href: "https://wa.me/YOUR_PHONE_NUMBER" },
-                { label: "hello@localify.in", href: "mailto:hello@localify.in" },
+                { label: "hello@catalystweb.com", href: "mailto:hello@catalystweb.com" },
               ]}
             />
           </Reveal>
         </div>
 
-        <Reveal variant="zoom" className="relative mb-10 overflow-hidden">
-          <div className="font-display font-semibold text-[20vw] leading-none text-gradient-animated opacity-20 select-none pointer-events-none text-center">
-            Localify
-          </div>
-        </Reveal>
+
 
         <Reveal variant="up" className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-6 border-t border-border/50 text-xs text-muted-foreground">
-          <p>© {new Date().getFullYear()} Localify Web Services. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} CatalystWeb Solutions. All rights reserved.</p>
           <p className="flex items-center gap-2">
             <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
             Crafted with care for local businesses

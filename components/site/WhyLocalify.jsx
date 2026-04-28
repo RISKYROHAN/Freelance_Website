@@ -8,12 +8,12 @@ const items = [
 ];
 
 export const WhyLocalify = () => {
-    return (<section id="why" className="relative py-24 lg:py-32 overflow-hidden">
+    return (<section id="why" className="relative py-12 lg:py-20 overflow-hidden">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-primary/5 blur-[150px] pointer-events-none morph"/>
 
       <div className="container relative">
         <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
-          <Reveal className="text-xs uppercase tracking-[0.2em] text-accent font-medium mb-4">[ The Localify Advantage ]</Reveal>
+          <Reveal className="text-xs uppercase tracking-[0.2em] text-accent font-medium mb-4">[ The CatalystWeb Advantage ]</Reveal>
           <Reveal as="h2" delay={100} className="font-display text-4xl lg:text-5xl xl:text-6xl font-semibold leading-[1.05] tracking-tight">
             Why smart businesses <span className="serif font-normal text-gradient-animated">choose me.</span>
           </Reveal>

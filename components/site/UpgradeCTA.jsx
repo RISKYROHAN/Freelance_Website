@@ -2,7 +2,7 @@ import { MessageCircle } from "lucide-react";
 import { Reveal } from "@/components/site/Reveal";
 
 export const UpgradeCTA = () => {
-    return (<section className="relative py-24 lg:py-32">
+    return (<section className="relative py-12 lg:py-20">
       <div className="container">
         <Reveal variant="zoom">
           <div className="relative overflow-hidden rounded-[2rem] lg:rounded-[2.5rem] glass-strong p-10 lg:p-16 noise">

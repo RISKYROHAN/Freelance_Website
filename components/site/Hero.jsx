@@ -29,6 +29,8 @@ export const Hero = () => {
   const orbRef = useRef(null);
 
   useEffect(() => {
+    // Disable parallax drift on small screens — it pushes the orb into the marquee below.
+    if (window.matchMedia("(max-width: 1023px)").matches) return;
     const onScroll = () => {
       if (!orbRef.current) return;
       const y = window.scrollY;
@@ -95,7 +97,7 @@ export const Hero = () => {
             </div>
           </div>
 
-          <Reveal once variant="zoom" delay={200} className="lg:col-span-5 relative">
+          <Reveal once variant="zoom" delay={200} className="lg:col-span-5 relative w-full max-w-sm sm:max-w-md mx-auto lg:max-w-none">
             <div ref={orbRef} className="relative aspect-square rounded-[2rem] overflow-hidden ring-border shadow-elegant transition-transform duration-300">
               <img src="/assets/hero-orb.jpg" alt="Premium digital craftsmanship" width={1536} height={1536} className="w-full h-full object-cover scale-110" />
               <div className="absolute inset-0 bg-gradient-to-tr from-background/60 via-transparent to-transparent" />
@@ -118,7 +120,7 @@ export const Hero = () => {
           </Reveal>
         </div>
 
-        <div className="mt-24 lg:mt-32 relative overflow-hidden">
+        <div className="mt-20 sm:mt-24 lg:mt-32 relative overflow-hidden">
           <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-background to-transparent z-10" />
           <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-background to-transparent z-10" />
           <div className="marquee">
